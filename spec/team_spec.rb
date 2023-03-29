@@ -13,6 +13,7 @@ RSpec.describe Team do
     team.add_player(player_1)
     team.add_player(player_2)
     team.roster
+    expect(team.roster).to eq([player_1, player_2])
     team.player_count
     expect(team.player_count).to eq(2)
   end
@@ -27,7 +28,12 @@ RSpec.describe Team do
     team.add_player(player_2)
     team.add_player(player_3)
     team.add_player(player_4)
-    # team.long_term_players
+    expect(team.long_term_players).to eq([player_1, player_3])
+    expect(team.short_term_players).to eq([player_2, player_4])
+
+    expect(team.total_value).to eq(85200000)
+    # team.total_value
+    # team.details
     
   end
 
