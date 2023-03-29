@@ -5,7 +5,7 @@ class Team
     @mascot = mascot
     @city = city
     @roster = []
-  end #def initialize
+  end
 
   def player_count
     roster.length
@@ -35,6 +35,13 @@ class Team
     roster_costs.sum
   end
 
+  # def details
+  #   total_value = team.total_value
+  #   player_count = team.player_count
 
-
-end #final
+  #   {
+  #     "total_value", {total_value}
+  #   "player_count" {player_count}
+  #   } 
+  # end
+end

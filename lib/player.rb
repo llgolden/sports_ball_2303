@@ -7,7 +7,7 @@ class Player
     @name = name
     @monthly_cost = monthly_cost
     @contract_length = contract_length
-  end #def initialize
+  end
 
   def first_name
     full_name = @name.partition(" ")
@@ -30,5 +30,4 @@ class Player
   def total_cost
     @monthly_cost * @contract_length
   end
-
-end #final
+end
