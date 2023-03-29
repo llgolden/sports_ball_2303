@@ -28,11 +28,11 @@ class Team
   end
 
   def total_value
-    @roster.find_all do |player|
-      player.total_cost
-
-    # iterate over the roster and pull each indivdulal player's total cost
-    # get the sum of the new array 
+    roster_costs = []
+    @roster.each do |player|
+      roster_costs << player.total_cost
+    end
+    roster_costs.sum
   end
 
 
