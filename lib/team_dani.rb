@@ -77,6 +77,28 @@ class Team
       #could use prepend instead of insert; uses the (position, thing_to_be_inserted) format
     end
 
+    # def average_cost_of_player
+    #   "$#{total_value / player_count}".insert(-4, ',').insert(-8, ',')
+    # end 
+    # potential issue if the cost was in the billions
+
+    # def average_cost_of_player
+    #   return_value = total_value / player_count
+    #   return_value.to_s.insert(1,",")
+    #   comma = return_value.to_s.insert(2,",")
+    #   comma.insert(6,",")
+    #   dollars = comma.insert(0,"$")
+    # end
+
+    # def average_cost_of_player
+    #   (total_value / player_count).to_s.insert(-4, “,”).insert(-8, “,”).insert(0, “$”)
+    # end
+    
+  # def average_cost_of_player
+  #   new_string = "$" + (total_value / player_count).to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse
+  #  new_string
+  # end
+
     def players_by_last_name
       @roster.map do |player|
         player.last_name 
