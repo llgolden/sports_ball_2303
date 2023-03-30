@@ -46,7 +46,7 @@ RSpec.describe Team do
   end
 
   describe "Iteration 3" do
-    xit "can list long term players" do
+    it "can list long term players" do
       team = Team.new("Dodgers", "Los Angeles")
       team = Team.new("Dodgers", "Los Angeles")
       player_1 = Player.new("Michael Palledorous" , 1000000, 36)
@@ -60,7 +60,7 @@ RSpec.describe Team do
       expect(team.long_term_players).to eq([player_1, player_3])
     end
 
-    xit "can list short term players" do
+    it "can list short term players" do
       team = Team.new("Dodgers", "Los Angeles")
       team = Team.new("Dodgers", "Los Angeles")
       player_1 = Player.new("Michael Palledorous" , 1000000, 36)
