@@ -35,13 +35,19 @@ class Team
     roster_costs.sum
   end
 
-  # def details
-  #   total_value = team.total_value
-  #   player_count = team.player_count
+  def details
+    team.total_value
+    team.player_count
 
-  #   {
-  #     "total_value", {total_value}
-  #   "player_count" {player_count}
-  #   } 
-  # end
+    team_details = {
+      silver => team.total_value, 
+      gold => team.player_count
+    } 
+
+    team_details.each do |total_value, player_count|
+      p {"total_value =>  #{silver}, player_count => #{gold}"}
+    end
+  end
+
+
 end

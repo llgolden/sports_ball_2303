@@ -32,6 +32,6 @@ RSpec.describe Team do
     expect(team.short_term_players).to eq([player_2, player_4])
 
     expect(team.total_value).to eq(85200000)
-    # expect(team.details). to eq({"total_value" => 85200000, "player_count" => 4})
+    expect(team.details). to eq({"total_value" => 85200000, "player_count" => 4})
   end
 end
